@@ -258,6 +258,45 @@ class DataLabel(object):
 
         return dLbl.get_or_add_rich()
 
+    @property
+    def show_category_name(self):
+        """
+
+        """
+        dLbl = self._dLbl
+        if dLbl is None:
+            return None
+        showCatName = dLbl.showCatName
+        if showCatName is None:
+            return None
+        return showCatName.val
+
+    @property
+    def show_series_name(self):
+        """
+
+        """
+        dLbl = self._dLbl
+        if dLbl is None:
+            return None
+        showSerName = dLbl.showSerName
+        if showSerName is None:
+            return None
+        return showSerName.val
+
+    @property
+    def show_val(self):
+        """
+
+        """
+        dLbl = self._dLbl
+        if dLbl is None:
+            return None
+        showVal = dLbl.showVal
+        if showVal is None:
+            return None
+        return showVal.val
+
     def _get_or_add_tx_rich(self):
         """
         Return the `c:tx` element for this data label, with its `c:rich`

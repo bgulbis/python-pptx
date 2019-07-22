@@ -45,6 +45,10 @@ class CT_DLbl(BaseOxmlElement):
     spPr = ZeroOrOne("c:spPr", successors=_tag_seq[5:])
     txPr = ZeroOrOne("c:txPr", successors=_tag_seq[6:])
     dLblPos = ZeroOrOne("c:dLblPos", successors=_tag_seq[7:])
+    showVal = ZeroOrOne("c:showVal", successors=_tag_seq[9:])
+    showCatName = ZeroOrOne("c:showCatName", successors=_tag_seq[10:])
+    showSerName = ZeroOrOne("c:showSerName", successors=_tag_seq[11:])
+
     del _tag_seq
 
     def get_or_add_rich(self):
